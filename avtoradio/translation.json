@@ -127,7 +127,7 @@
          "description": "{col:msx-white}{col}Дискотека 80-х (2017 г.) {col} {br}Запись прямой трансляции фестиваля Авторадио/ Disco 80's festival - LIVE",
          "backdrop": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/LogoBig%402x.png/800px-LogoBig%402x.png",
          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCU5cGezCDZCce87zeqKRplL7iBv0ZFD70pA&s",
-         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=zZbCbfVOQgk",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=-dhhfkDDcPs",
          "playerLabel": "Дискотека 80-х (2017 г.) ",
          "properties": {
             "trigger:back": "player:stop"
