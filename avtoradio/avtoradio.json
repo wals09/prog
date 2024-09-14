@@ -198,6 +198,72 @@
          "properties": {
             "trigger:back": "player:stop"
          }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}Люся Чеботина - Командир{col}{br}(LIVE @ Авторадио)",
+         "backdrop": "https://cdns-images.dzcdn.net/images/cover/a78ef859c3e441b8b211106e3776b47f/1900x1900-000000-80-0-0.jpg",
+         "image": "https://i.ytimg.com/vi/V_5nAJaHPV0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA0-KZwIf4J_yayYV8YDDx1F8v7NA",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=V_5nAJaHPV0",
+         "playerLabel": "Люся Чеботина - Командир",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}NYUSHA - Сверху Вниз{col}{br}(LIVE @ Авторадио)",
+         "backdrop": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl9UW7oy5K3mcSD_QPYlrBY9P11HhJmYHBBg&s",
+         "image": "https://i.ytimg.com/vi/4UMllbhjUhk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAobZZ37G80N_2H19WXrKaNFhWjDg",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=4UMllbhjUhk",
+         "playerLabel": "NYUSHA - Сверху Вниз",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}Татьяна Куртукова - Матушка{col}{br}(LIVE @ Авторадио)",
+         "backdrop": "https://n1s1.hsmedia.ru/a9/f5/e1/a9f5e11f34d89f4928b9e1e9b8c0c7af/728x485_1_c6ca752ca2bf37bded33916af25b6687@1800x1200_0xC3iYYxp0_5436929693437779239.jpg",
+         "image": "https://i.ytimg.com/vi/hNi1oOPQXh4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCyCSMqJU-YKBag8jrso33o5O4Xdg",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=hNi1oOPQXh4",
+         "playerLabel": "Татьяна Куртукова - Матушка",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}5УТРА, Ваня Дмитриенко - Не Представляешь {col}{br}(LIVE @ Авторадио)",
+         "backdrop": "https://sun9-63.userapi.com/hF9fwM9PkoySWFGd7oDl8XoVhgnyBXEksH6uAg/L4b0bQzbCgo.jpg.jpg",
+         "image": "https://i.ytimg.com/vi/lGRSmjpY3Iw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBkydmMlio7JmEsmk1PdykrThWLMw",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=lGRSmjpY3Iw",
+         "playerLabel": "5УТРА, Ваня Дмитриенко - Не Представляешь ",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}Seville (Artik & Asti) - Качели {col}{br}(LIVE @ Авторадио)",
+         "backdrop": "https://upload.wikimedia.org/wikipedia/commons/b/be/ARTIK_%26_SEVILLE.jpg",
+         "image": "https://i.ytimg.com/vi/6xkbzStrmZQ/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBNroRt3EzYACFvCTQWYrnlCokjeQ",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=6xkbzStrmZQ",
+         "playerLabel": "Seville (Artik & Asti) - Качели ",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}AKMAL' - Раневская{col}{br}(LIVE @ Авторадио)",
+         "backdrop": "https://i.scdn.co/image/ab67616100005174d92ce282d841679728d3b53b",
+         "image": "https://i.ytimg.com/vi/SJGzsL4F5f0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBvJbU7jtklN_taq6Ti_vCC_rbwZQ",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=SJGzsL4F5f0",
+         "playerLabel": "AKMAL' - Раневская",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
       }
    ]
 }
