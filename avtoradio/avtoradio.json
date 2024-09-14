@@ -1,0 +1,203 @@
+{
+   "compress": true,
+   "type": "list",
+   "background": "content:https://wals09.github.io/kf/img/bac.jpg",
+   "dictionary": "https://wals09.github.io/kf/dictionary.json",
+   "headline": "АВТОРАДИО {col:red}|{col} Хиты лета 2024 🔥",
+   "transparent": 2,
+   "preload": "next",
+   "underlay": {
+      "action": "[quiet|delay:backdrop:1:interaction:load:http://msx.benzac.de/interaction/backdrop.html]",
+      "data": {
+         "url": "none"
+      },
+      "items": [
+         {
+            "id": "text",
+            "type": "space",
+            "layout": "0,1,8,3",
+            "offset": "0.4,0,0.1,0",
+            "headline": "",
+            "text": ""
+         },
+         {
+            "id": "text2",
+            "type": "space",
+            "layout": "7,7,2,1",
+            "offset": "-0.3,0.52,0,-0.5",
+            "headline": "W A L S 0 9"
+         },
+         {
+            "type": "space",
+            "round": false,
+            "layout": "0,7,7,1",
+            "offset": "-1,0.7,0,-0.73",
+            "color": "red"
+         },
+         {
+            "type": "space",
+            "round": false,
+            "layout": "9,7,7,1",
+            "offset": "0,0.7,2,-0.73",
+            "color": "red"
+         }
+      ]
+   },
+   "template": {
+      "type": "default",
+      "layout": "0,0,3,2",
+      "area": "0,3,16,5",
+      "offset": "0.4,0,0.1,0",
+      "wrapperColor": "msx-glass",
+      "imageHeight": 1.8,
+      "color": "msx-glass",
+      "imageFiller": "cover",
+      "truncation": "titleFooter",
+      "transparent": 1,
+      "titleHeader": "",
+      "titleFooter": "",
+      "description": "No description available.",
+      "backdrop": "none",
+      "image": "none",
+      "selection": {
+         "important": true,
+         "action": "data",
+         "data": {
+            "actions": [
+               {
+                  "action": "invalidate:content:underlay:text"
+               },
+               {
+                  "action": "delay:text:1:update:content:underlay:text",
+                  "data": {
+                     "headline": "{context:titleHeader}",
+                     "text": "{context:titleFooter}{br}{br}{context:description}"
+                  }
+               },
+               {
+                  "action": "delay:backdrop:1:interaction:load:http://msx.benzac.de/interaction/backdrop.html",
+                  "data": {
+                     "url": "{context:backdrop}",
+                     "type": 1
+                  }
+               }
+            ]
+         }
+      },
+      "properties": {
+         "image:extension": "| {context:titleHeader}"
+      }
+   },
+   "items": [
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}DJ SMASH, Ольга Серябкина - Супергерой{col} {br}(LIVE @ Авторадио)",
+         "backdrop": "https://www.ok-magazine.ru/images/cache/2024/7/10/heighten_527_crop_3000_2000_0_0_q90_2584661_87b2145fb1a810ca560fc4fa4.jpeg",
+         "image": "https://i.ytimg.com/vi/Ah9LUwbEVlk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD7eF_Pe8E5rOJK540FJh6fO9uwuQ",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=Ah9LUwbEVlk",
+         "playerLabel": "DJ SMASH, Ольга Серябкина - Супергерой",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}Seville (Artik & Asti), Nick Riin - Nobody Like You{col} {br}(LIVE @ Авторадио) ",
+         "backdrop": "https://www.ok-magazine.ru/images/cache/2024/6/13/fit_795_547_false_crop_1095_616_0_21_q90_2541771_17a03a49f47a2c35db794298d.jpeg",
+         "image": "https://i.ytimg.com/vi/Akrr-5fh8dk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBeG7vLsNOoJfg-NRN35Ybm1PsIQg",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=Akrr-5fh8dk",
+         "playerLabel": "Seville (Artik & Asti), Nick Riin - Nobody Like You",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}NILETTO, Олег Майами, Лёша Свик - Громче Города {col} {br}(LIVE @ Авторадио)",
+         "backdrop": "https://images.genius.com/dbcaa4ef45efed80cae34a9a6b75c61b.895x895x1.png",
+         "image": "https://i.ytimg.com/vi/sJy-IDoo-Vw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBQ_pwM674WW7vvRz7P1mku0jQOqw",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=sJy-IDoo-Vw",
+         "playerLabel": "NILETTO, Олег Майами, Лёша Свик - Громче Города",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}NLO, Leonid Rudenko, REFLEX - Танцы 2.0{col}{br} (LIVE @ Авторадио)",
+         "backdrop": "https://i.scdn.co/image/ab67616d0000b27323e229e0ff5ec543cc87bf7a",
+         "image": "https://i.ytimg.com/vi/zZbCbfVOQgk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC_nwOp1saffmHLOz4BHXfZCH4xVg",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=zZbCbfVOQgk",
+         "playerLabel": "NLO, Leonid Rudenko, REFLEX - Танцы 2.0",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}Zvonkiy, Асия - Лети{br}(LIVE @ Авторадио)",
+         "backdrop": "https://avatars.dzeninfra.ru/get-zen-vh/271828/2a0099f1aa14d8f1c1e1b228eba742d494df/1080x1920",
+         "image": "https://i.ytimg.com/vi/Tvk0mrDUcms/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDMs6iokIQoxPkrJ9zkfNkD2Umkjw",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=Tvk0mrDUcms",
+         "playerLabel": "Zvonkiy, Асия - Лети",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}{br}5sta Family - В Июле (LIVE @ Авторадио)",
+         "backdrop": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/85/b6/c5/85b6c55c-2fff-5aff-0a58-769d26ae54bd/3614594138963.png/1200x1200bb.jpg",
+         "image": "https://i.ytimg.com/vi/FNimi2lPgsU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBoFNzmzBePIDU-N7GUznNdbCD-NA",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=FNimi2lPgsU",
+         "playerLabel": "5sta Family - В Июле",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}LIVE Премьера! Ани Лорак - Танцы {col} {br}(LIVE @ Авторадио)",
+         "backdrop": "https://www.ok-magazine.ru/images/cache/2024/3/22/heighten_1000_q90_2419081_8773befa4e91523877ee504fe.jpeg",
+         "image": "https://i.ytimg.com/vi/XgtMSw0zbn0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAXP1eP-w8lw5QETw9qLnd4oA7Yqw",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=XgtMSw0zbn0",
+         "playerLabel": "Ани Лорак - Танцы",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}ПРЕМЬЕРА! DAVA - Весна{col} {br}(LIVE @ Авторадио)",
+         "backdrop": "https://is5-ssl.mzstatic.com/image/thumb/Music126/v4/4a/6d/29/4a6d2951-e07f-b906-08ab-e7183be0d40d/0.jpg/1200x1200bb.jpg",
+         "image": "https://i.ytimg.com/vi/RcUwaCjNEww/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDIHz44_PTLtGS3FpcpiW2Zjoqj2Q",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=RcUwaCjNEww",
+         "playerLabel": "DAVA - Весна ",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}GAYAZOV$ BROTHER$ - С Днём Рождения {col} {br}(LIVE @ Авторадио)",
+         "backdrop": "https://cdns-images.dzcdn.net/images/cover/26aab354e5e8948ca535ef7d77c82ca4/1900x1900-000000-80-0-0.jpg",
+         "image": "https://i.ytimg.com/vi/XklQNukVNrk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAXsd_imLJnZn5XyGFBYysTRUtTdg",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=XklQNukVNrk",
+         "playerLabel": "GAYAZOV$ BROTHER$ - С Днём Рождения ",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}Премьера! Полина Гагарина - Родной{col}{br}(LIVE @ Авторадио)",
+         "backdrop": "https://images.genius.com/12e6734277fe14f2c3999aeadcaf3c45.786x786x1.jpg",
+         "image": "https://i.ytimg.com/vi/GCjYz-uTnkA/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBw-I_3nOr6eo_XsQj5eOOgeEXhPQ",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=GCjYz-uTnkA",
+         "playerLabel": "Премьера! Полина Гагарина - Родной",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      }
+   ]
+}
