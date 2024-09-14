@@ -45,7 +45,7 @@
    },
    "template": {
       "type": "default",
-      "layout": "0,0,3,2",
+      "layout": "0,0,4,2",
       "area": "0,3,16,5",
       "wrapperColor": "msx-glass",
       "imageHeight": 1.8,
