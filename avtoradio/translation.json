@@ -1,0 +1,148 @@
+{
+   "compress": true,
+   "type": "list",
+   "background": "content:https://wals09.github.io/kf/img/bac.jpg",
+   "dictionary": "https://wals09.github.io/kf/dictionary.json",
+   "headline": "АВТОРАДИО {col:red}|{col} Трансляции",
+   "transparent": 2,
+   "preload": "next",
+   "underlay": {
+      "action": "[quiet|delay:backdrop:1:interaction:load:http://msx.benzac.de/interaction/backdrop.html]",
+      "data": {
+         "url": "none"
+      },
+      "items": [
+         {
+            "id": "text",
+            "type": "space",
+            "layout": "0,2,15,3",
+            "offset": "0.4,0,0.1,0",
+            "headline": "",
+            "text": ""
+         },
+         {
+            "id": "text2",
+            "type": "space",
+            "layout": "7,7,2,1",
+            "offset": "-0.3,0.52,0,-0.5",
+            "headline": "W A L S 0 9"
+         },
+         {
+            "type": "space",
+            "round": false,
+            "layout": "0,7,7,1",
+            "offset": "-1,0.7,0,-0.73",
+            "color": "red"
+         },
+         {
+            "type": "space",
+            "round": false,
+            "layout": "9,7,7,1",
+            "offset": "0,0.7,2,-0.73",
+            "color": "red"
+         }
+      ]
+   },
+   "template": {
+      "type": "default",
+      "layout": "0,0,3,2",
+      "area": "0,4,16,4",
+      "offset": "0.4,0,0.1,0",
+      "wrapperColor": "msx-glass",
+      "imageHeight": 1.8,
+      "color": "transparent",
+      "imageFiller": "cover",
+      "truncation": "titleFooter",
+      "transparent": 1,
+      "titleHeader": "",
+      "titleFooter": "",
+      "description": "No description available.",
+      "backdrop": "none",
+      "image": "none",
+      "selection": {
+         "important": true,
+         "action": "data",
+         "data": {
+            "actions": [
+               {
+                  "action": "invalidate:content:underlay:text"
+               },
+               {
+                  "action": "delay:text:1:update:content:underlay:text",
+                  "data": {
+                     "headline": "{context:titleHeader}",
+                     "text": "{context:titleFooter}{br}{br}{context:description}"
+                  }
+               },
+               {
+                  "action": "delay:backdrop:1:interaction:load:http://msx.benzac.de/interaction/backdrop.html",
+                  "data": {
+                     "url": "{context:backdrop}",
+                     "type": 1
+                  }
+               }
+            ]
+         }
+      },
+      "properties": {
+         "image:extension": "| {context:titleHeader}"
+      }
+   },
+   "items": [
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}Дискотека 80-х (2019 г.) {col} {br}Запись прямой трансляции фестиваля Авторадио/ Disco 80's festival - LIVE",
+         "backdrop": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/LogoBig%402x.png/800px-LogoBig%402x.png",
+         "image": "https://i.ytimg.com/vi/2-daXJ9DKrA/hqdefault.jpg",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=2-daXJ9DKrA",
+         "playerLabel": "Дискотека 80-х (2019 г.)",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}Дискотека 80-х (2018 г.){col} {br} Запись прямой трансляции фестиваля Авторадио/ Disco 80's festival - LIVE ",
+         "backdrop": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/LogoBig%402x.png/800px-LogoBig%402x.png",
+         "image": "https://i.ytimg.com/vi/ecB5lyrPQUY/sddefault.jpg?v=5d8d9351",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=ByXqZOrss9E",
+         "playerLabel": "Дискотека 80-х (2018 г.)",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}«Авторадио – 25 LIVE» {col} {br}Юбилейный концерт в Крокус Сити Холле (запись трансляции)",
+         "backdrop": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/LogoBig%402x.png/800px-LogoBig%402x.png",
+         "image": "https://i.ytimg.com/vi/rDVxldImC4k/maxresdefault.jpg",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=rDVxldImC4k",
+         "playerLabel": "«Авторадио – 25 LIVE»",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}{col}Дискотека 80-х (2017 г.) {col} {br}Запись прямой трансляции фестиваля Авторадио/ Disco 80's festival - LIVE",
+         "backdrop": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/LogoBig%402x.png/800px-LogoBig%402x.png",
+         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCU5cGezCDZCce87zeqKRplL7iBv0ZFD70pA&s",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=zZbCbfVOQgk",
+         "playerLabel": "Дискотека 80-х (2017 г.) ",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}Дискотека 80-х (2015 г.){br} Запись прямой трансляции фестиваля Авторадио/ Disco 80's festival - LIVE",
+         "backdrop": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/LogoBig%402x.png/800px-LogoBig%402x.png",
+         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbrjING5r358ddIpb12nsyQsZBSSne4liiaA&s",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=4cZqUztx8Nk",
+         "playerLabel": "Дискотека 80-х (2015 г.)",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      }
+   ]
+}
