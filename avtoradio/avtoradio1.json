@@ -96,6 +96,23 @@
             "background": "https://blogs.salford.ac.uk/made-in-salford/wp-content/uploads/sites/41/2018/09/radio-banner-1.jpg",
             "action": "update:content:underlay:text",
             "data": {
+               "headline": "Ода 90-м, или всё новое - хорошо забытое старое. В этот плейлист мы \"закупорили\" ностальгию из студии Авторадио! ",
+               "text": ""
+            }
+         },
+         "image": "https://www.tsn24.ru/upload/resize_cache/iblock/9f1/720_460_2/osin4tk2idezggkbae1icp1zuizeunf3.png",
+         "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/oda_90m.json",
+         "properties": {
+            "image:extension": "| {col:msx-white}First Item"
+         }
+      },
+      {
+         "focus": true,
+         "selection": {
+            "important": true,
+            "background": "https://blogs.salford.ac.uk/made-in-salford/wp-content/uploads/sites/41/2018/09/radio-banner-1.jpg",
+            "action": "update:content:underlay:text",
+            "data": {
                "headline": "ХИТЫ ЛЕТА 2024 🔥Слушай и смотри живое исполнение песен, которые звучат этим летом повсюду!",
                "text": ""
             }
@@ -140,23 +157,7 @@
             "image:extension": "| {col:msx-white}First Item"
          }
       },
-      {
-         "focus": true,
-         "selection": {
-            "important": true,
-            "background": "https://blogs.salford.ac.uk/made-in-salford/wp-content/uploads/sites/41/2018/09/radio-banner-1.jpg",
-            "action": "update:content:underlay:text",
-            "data": {
-               "headline": "Ода 90-м, или всё новое - хорошо забытое старое. В этот плейлист мы \"закупорили\" ностальгию из студии Авторадио! ",
-               "text": ""
-            }
-         },
-         "image": "https://www.tsn24.ru/upload/resize_cache/iblock/9f1/720_460_2/osin4tk2idezggkbae1icp1zuizeunf3.png",
-         "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/oda_90m.json",
-         "properties": {
-            "image:extension": "| {col:msx-white}First Item"
-         }
-      },
+ 
       {
          "focus": true,
          "selection": {
