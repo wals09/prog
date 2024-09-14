@@ -1,0 +1,224 @@
+{
+   "compress": true,
+   "type": "list",
+   "background": "content:https://wals09.github.io/kf/img/bac.jpg",
+   "dictionary": "https://wals09.github.io/kf/dictionary.json",
+   "headline": "АВТОРАДИО {col:red}|{col} Ода девяностым",
+   "transparent": 2,
+   "preload": "next",
+   "underlay": {
+      "action": "[quiet|delay:backdrop:1:interaction:load:http://msx.benzac.de/interaction/backdrop.html]",
+      "data": {
+         "url": "none"
+      },
+      "items": [
+         {
+            "id": "text",
+            "type": "space",
+            "layout": "0,1,8,3",
+            "offset": "0.4,0,0.1,0",
+            "headline": "",
+            "text": ""
+         },
+         {
+            "id": "text2",
+            "type": "space",
+            "layout": "7,7,2,1",
+            "offset": "-0.3,0.52,0,-0.5",
+            "headline": "W A L S 0 9"
+         },
+         {
+            "type": "space",
+            "round": false,
+            "layout": "0,7,7,1",
+            "offset": "-1,0.7,0,-0.73",
+            "color": "red"
+         },
+         {
+            "type": "space",
+            "round": false,
+            "layout": "9,7,7,1",
+            "offset": "0,0.7,2,-0.73",
+            "color": "red"
+         }
+      ]
+   },
+   "template": {
+      "type": "default",
+      "layout": "0,0,4,2",
+      "area": "0,3,16,5",
+      "wrapperColor": "msx-glass",
+      "imageHeight": 1.8,
+      "color": "msx-glass",
+      "imageFiller": "cover",
+      "truncation": "titleFooter",
+      "transparent": 1,
+      "titleHeader": "",
+      "titleFooter": "",
+      "description": "No description available.",
+      "backdrop": "none",
+      "image": "none",
+      "selection": {
+         "important": true,
+         "action": "data",
+         "data": {
+            "actions": [
+               {
+                  "action": "invalidate:content:underlay:text"
+               },
+               {
+                  "action": "delay:text:1:update:content:underlay:text",
+                  "data": {
+                     "headline": "{context:titleHeader}",
+                     "text": "{context:titleFooter}{br}{br}{context:description}"
+                  }
+               },
+               {
+                  "action": "delay:backdrop:1:interaction:load:http://msx.benzac.de/interaction/backdrop.html",
+                  "data": {
+                     "url": "{context:backdrop}",
+                     "type": 1
+                  }
+               }
+            ]
+         }
+      },
+      "properties": {
+         "image:extension": "| {context:titleHeader}"
+      }
+   },
+   "items": [
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}Сергей Жуков - Когда Мы Были Молодыми {col} {br}(LIVE @ Авторадио)",
+         "backdrop": "https://yt3.googleusercontent.com/3nYTZS8_H2yxH3ogQfgl8NW5RzT_1wHr8v1Vl2Xe0_k1CtCHuhQZsR4-UctmXWuTyVph_05Rjfs=s900-c-k-c0x00ffffff-no-rj",
+         "image": "https://i.ytimg.com/vi/YQeyyfXSP3w/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCpE78AvSjUMiQ5A9TJsyrc-wIOxQ",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=YQeyyfXSP3w",
+         "playerLabel": "Сергей Жуков - Когда Мы Были Молодыми ",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}Стас Костюшкин feat. Шура - На стиле 90-х {col} {br}(LIVE @ Авторадио) ",
+         "backdrop": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6xznWIbjN3RUpJQ01ktSo7g7WrGNvym9IMtH5b-y40v507oO6RctCVy4Qm32dAvtTV5g&usqp=CAU",
+         "image": "https://i.ytimg.com/vi/eNdJdl6t-Vc/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDGhALMDw7ixR9YCSHuWT0WQXhP0w",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=eNdJdl6t-Vc",
+         "playerLabel": "Стас Костюшкин feat. Шура - На стиле 90-х ",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}Наташа Королёва - Символ Юности {col} {br}(LIVE @ Авторадио)",
+         "backdrop": "https://100biografiy.ru/wp-content/uploads/2020/02/3-5-650x475.jpg",
+         "image": "https://i.ytimg.com/vi/DYfyGufpGLw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBU3pQjVS9m4hlqG-GWDBePUqe34w",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=DYfyGufpGLw",
+         "playerLabel": "Наташа Королёва - Символ Юности ",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}Мохито - В жизни Так Бывает{col}{br} (LIVE @ Авторадио)",
+         "backdrop": "https://cdns-images.dzcdn.net/images/cover/d5797585777383d7fabd5fe94f007cfc/0x1900-000000-80-0-0.jpg",
+         "image": "https://i.ytimg.com/vi/rGSu5Zl1pIY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCB5ZGA69rTujXj3QwnLnmYtc-LFw",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=rGSu5Zl1pIY",
+         "playerLabel": "Мохито - В жизни Так Бывает",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}FILATOV & KARAS - Лирика {br}(LIVE @ Авторадио)",
+         "backdrop": "https://is1-ssl.mzstatic.com/image/thumb/Music71/v4/61/c0/5b/61c05b3d-1bfc-3d8d-8f5a-fcdd80837431/190295884185.jpg/1200x1200bf-60.jpg",
+         "image": "https://i.ytimg.com/vi/dlLoKyjQtfA/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDkLhpMiQsW_LRK8rvAxVjnjf3h5w",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=dlLoKyjQtfA",
+         "playerLabel": "FILATOV & KARAS - Лирика ",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}{br}Дима Билан - Полуночное Такси  (LIVE @ Авторадио)",
+         "backdrop": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/36/b3/3b/36b33b7b-98b3-b116-ecbf-97e2a43ddf94/cover.jpg/1200x1200bb.jpg",
+         "image": "https://i.ytimg.com/vi/8H9CugkSd-U/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAqOZd-XyN6ev6wMDR9-3uAWdE_SA",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=8H9CugkSd-U",
+         "playerLabel": "Дима Билан - Полуночное Такси ",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}Сергей Лазарев - Лови{col} {br}(LIVE @ Авторадио)",
+         "backdrop": "https://images.genius.com/d8a83b6aeb8e760bccbea62eb2824b0d.1000x1000x1.png",
+         "image": "https://i.ytimg.com/vi/NWzBrDEoYMg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBBTZTYEnF7OcX7L6LNFQ8W4-n9NQ",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=NWzBrDEoYMg",
+         "playerLabel": "Сергей Лазарев - Лови",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}Zivert - Life {col} {br}(LIVE @ Авторадио)",
+         "backdrop": "https://i1.sndcdn.com/artworks-lhhtTyhQIB1bk6pQ-gztzUg-t500x500.jpg",
+         "image": "https://i.ytimg.com/vi/EHXkV2S5Hq8/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBUGEd9y8KKeyDaIcTBSOIor8Ut6Q",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=EHXkV2S5Hq8",
+         "playerLabel": "Zivert - Life  ",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}Дима Билан - Про Белые Розы {col} {br}(LIVE @ Авторадио)",
+         "backdrop": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0dOXW53Q9V_J7K-9nsD8sRxviIV4L4luhbVDvptsoIxqNeCLRr5v1UqbWwFUN6daqQLo&usqp=CAU",
+         "image": "https://i.ytimg.com/vi/AwNilktMxcw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDWhJ-AuTzSU37LpvwgMhb-CMYhaw",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=AwNilktMxcw",
+         "playerLabel": "Дима Билан - Про Белые Розы  ",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}Ольга Серябкина - Набери Мой Номер{col}{br}(LIVE @ Авторадио)",
+         "backdrop": "https://lastfm.freetls.fastly.net/i/u/ar0/6dee4cab1e1da45749dd92fdadcc8c1b.jpg",
+         "image": "https://i.ytimg.com/vi/FxS72REHTrM/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA0m7ISkJviPgcsJnWtnWO3uRr4Hw",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=FxS72REHTrM",
+         "playerLabel": "Ольга Серябкина - Набери Мой Номер",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}Ираклий Пирцхалава ft. Lika Star - Luna{col}{br}(LIVE @ Авторадио)",
+         "backdrop": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/f2/30/6d/f2306d95-4e22-ac8f-5987-1b0e2a7e8de5/cover.jpg/800x800cc.jpg",
+         "image": "https://i.ytimg.com/vi/W_S7qdfIIAc/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBqcMD_2k-pApsSLpjdOBcXZBNz_A",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=W_S7qdfIIAc",
+         "playerLabel": "Ираклий Пирцхалава ft. Lika Star - Luna",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      },
+      {
+         "titleHeader": "",
+         "description": "{col:msx-white}VAVAN - Ай-яй-яй{col}{br}(LIVE @ Авторадио)",
+         "backdrop": "https://images.genius.com/7d48c7cbb7dedde60b92b9615e3b1f51.1000x1000x1.jpg",
+         "image": "https://i.ytimg.com/vi/WTvsxvaPFrk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDQd5dpuEAjmJWqjLJeh87IdUF74gg",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=WTvsxvaPFrk",
+         "playerLabel": "VAVAN - Ай-яй-яй",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
+      }
+   ]
+}
