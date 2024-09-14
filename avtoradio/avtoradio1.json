@@ -73,6 +73,7 @@
    },
    "items": [
       {
+         "title": "ТРАНСЛЯЦИИ",
          "focus": true,
          "selection": {
             "important": true,
@@ -84,12 +85,10 @@
             }
          },
          "image": "https://www.tsn24.ru/upload/resize_cache/iblock/9f1/720_460_2/osin4tk2idezggkbae1icp1zuizeunf3.png",
-         "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/translation.json",
-         "properties": {
-            "image:extension": "| {col:msx-white}First Item"
-         }
+         "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/translation.json"
       },
       {
+         "title": "Ода девяностым",
          "focus": true,
          "selection": {
             "important": true,
@@ -101,12 +100,10 @@
             }
          },
          "image": "https://www.tsn24.ru/upload/resize_cache/iblock/9f1/720_460_2/osin4tk2idezggkbae1icp1zuizeunf3.png",
-         "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/oda_90m.json",
-         "properties": {
-            "image:extension": "| {col:msx-white}First Item"
-         }
+         "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/oda_90m.json"
       },
       {
+         "title": "ХИТЫ ЛЕТА 2024",
          "focus": true,
          "selection": {
             "important": true,
@@ -118,12 +115,10 @@
             }
          },
          "image": "https://www.tsn24.ru/upload/resize_cache/iblock/9f1/720_460_2/osin4tk2idezggkbae1icp1zuizeunf3.png",
-         "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/hity_leta_24.json",
-         "properties": {
-            "image:extension": "| {col:msx-white}First Item"
-         }
+         "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/hity_leta_24.json"
       },
       {
+         "title": "ХИТЫ 2024",
          "focus": true,
          "selection": {
             "important": true,
@@ -135,12 +130,10 @@
             }
          },
          "image": "https://www.tsn24.ru/upload/resize_cache/iblock/9f1/720_460_2/osin4tk2idezggkbae1icp1zuizeunf3.png",
-         "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/avtoradio.json",
-         "properties": {
-            "image:extension": "| {col:msx-white}First Item"
-         }
+         "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/avtoradio.json"
       },
       {
+         "title": "Плейлист на выпускной",
          "focus": true,
          "selection": {
             "important": true,
@@ -152,28 +145,7 @@
             }
          },
          "image": "https://www.tsn24.ru/upload/resize_cache/iblock/9f1/720_460_2/osin4tk2idezggkbae1icp1zuizeunf3.png",
-         "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/avtoradio.json",
-         "properties": {
-            "image:extension": "| {col:msx-white}First Item"
-         }
-      },
- 
-      {
-         "focus": true,
-         "selection": {
-            "important": true,
-            "background": "https://blogs.salford.ac.uk/made-in-salford/wp-content/uploads/sites/41/2018/09/radio-banner-1.jpg",
-            "action": "update:content:underlay:text",
-            "data": {
-               "headline": "Хиты лета 2024 🔥",
-               "text": ""
-            }
-         },
-         "image": "https://www.tsn24.ru/upload/resize_cache/iblock/9f1/720_460_2/osin4tk2idezggkbae1icp1zuizeunf3.png",
-         "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/avtoradio.json",
-         "properties": {
-            "image:extension": "| {col:msx-white}First Item"
-         }
+         "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/avtoradio.json"
       },
       {
          "focus": true,
@@ -187,10 +159,7 @@
             }
          },
          "image": "https://www.tsn24.ru/upload/resize_cache/iblock/9f1/720_460_2/osin4tk2idezggkbae1icp1zuizeunf3.png",
-         "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/avtoradio.json",
-         "properties": {
-            "image:extension": "| {col:msx-white}First Item"
-         }
+         "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/avtoradio.json"
       },
       {
          "focus": true,
@@ -204,10 +173,7 @@
             }
          },
          "image": "https://www.tsn24.ru/upload/resize_cache/iblock/9f1/720_460_2/osin4tk2idezggkbae1icp1zuizeunf3.png",
-         "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/avtoradio.json",
-         "properties": {
-            "image:extension": "| {col:msx-white}First Item"
-         }
+         "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/avtoradio.json"
       },
       {
          "focus": true,
@@ -221,10 +187,7 @@
             }
          },
          "image": "https://www.tsn24.ru/upload/resize_cache/iblock/9f1/720_460_2/osin4tk2idezggkbae1icp1zuizeunf3.png",
-         "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/avtoradio.json",
-         "properties": {
-            "image:extension": "| {col:msx-white}First Item"
-         }
+         "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/avtoradio.json"
       },
       {
          "focus": true,
@@ -238,10 +201,21 @@
             }
          },
          "image": "https://www.tsn24.ru/upload/resize_cache/iblock/9f1/720_460_2/osin4tk2idezggkbae1icp1zuizeunf3.png",
-         "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/avtoradio.json",
-         "properties": {
-            "image:extension": "| {col:msx-white}First Item"
-         }
+         "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/avtoradio.json"
+      },
+      {
+         "focus": true,
+         "selection": {
+            "important": true,
+            "background": "https://blogs.salford.ac.uk/made-in-salford/wp-content/uploads/sites/41/2018/09/radio-banner-1.jpg",
+            "action": "update:content:underlay:text",
+            "data": {
+               "headline": "Хиты лета 2024 🔥",
+               "text": ""
+            }
+         },
+         "image": "https://www.tsn24.ru/upload/resize_cache/iblock/9f1/720_460_2/osin4tk2idezggkbae1icp1zuizeunf3.png",
+         "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/avtoradio.json"
       }
    ]
 }
