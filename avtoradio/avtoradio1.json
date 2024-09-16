@@ -2,6 +2,7 @@
    "compress": true,
    "type": "list",
    "headline": "AVTORADIO",
+   "background": "https://fs01.cap.ru/www22-09/galatr/news/2022/12/17/a8c693cb-c956-48d9-a84a-63de274c7614/kartinki-diskoteka-16.jpg",
    "extension": "{col:msx-white}{ico:msx-white:event} {now:date:D, M d, yyyy}{tb}{ico:msx-white:access-time} {now:time:hh:mm}",
    "dictionary": "https://wals09.github.io/msx/dictionary.json",
    "preload": "next",
@@ -13,29 +14,29 @@
             "layout": "0,0,16,3",
             "offset": "-1.25,-1.5,3,1.5",
             "color": "msx-glass",
-            "image": "https://blogs.salford.ac.uk/made-in-salford/wp-content/uploads/sites/41/2018/09/radio-banner-1.jpg",
+            "image": "https://yt3.googleusercontent.com/fhxVQtDkZyK1MzYx5X_rsJXSgNlN3jMn5JiUbIDUHsoaihBresEIm-ZyItb73fj_-SEn-QLxNQ=w1138-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
             "imageFiller": "cover",
             "imageOverlay": 4
          },
          {
             "type": "space",
             "round": false,
-            "layout": "0,3,16,5",
-            "offset": "-1.25,-0.25,3,1.2",
-            "color": "msx-black-soft"
+            "layout": "0,0,2,2",
+            "offset": "0,0,0,0,",
+            "image": "https://yt3.googleusercontent.com/ytc/AIdro_kUkL-a59qSwEq6Dc-Il979Khwahh1_URZsficN8tYV=s160-c-k-c0x00ffffff-no-rj"
          },
          {
             "type": "space",
             "round": false,
-            "layout": "0,0,16,1",
-            "offset": "-1,0,2,-0.75",
-            "color": "red"
+            "layout": "0,2,16,1",
+            "offset": "-1.25,0.2,3,-0.2",
+            "color": "msx-red"
          },
          {
             "id": "text",
             "type": "space",
-            "layout": "1,2,15,3",
-            "offset": "-1,0,0,0",
+            "layout": "0,2,16,3",
+            "offset": "0,0.3,0,0",
             "headline": "",
             "text": ""
          },
@@ -69,7 +70,7 @@
       "offset": "0,0,0,0",
       "trigger:back": "player:stop",
       "color": "msx-glass",
-      "imageFiller": "cover"
+      "imageFiller": ""
    },
    "items": [
       {
@@ -77,14 +78,13 @@
          "focus": true,
          "selection": {
             "important": true,
-            "background": "https://blogs.salford.ac.uk/made-in-salford/wp-content/uploads/sites/41/2018/09/radio-banner-1.jpg",
             "action": "update:content:underlay:text",
             "data": {
                "headline": "ТРАНСЛЯЦИИ. Записи прямых трансляций фестиваля Авторадио",
                "text": ""
             }
          },
-         "image": "https://www.tsn24.ru/upload/resize_cache/iblock/9f1/720_460_2/osin4tk2idezggkbae1icp1zuizeunf3.png",
+         "image": "https://yt3.googleusercontent.com/ytc/AIdro_kUkL-a59qSwEq6Dc-Il979Khwahh1_URZsficN8tYV=s160-c-k-c0x00ffffff-no-rj",
          "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/translation.json"
       },
       {
@@ -92,14 +92,13 @@
          "focus": true,
          "selection": {
             "important": true,
-            "background": "https://blogs.salford.ac.uk/made-in-salford/wp-content/uploads/sites/41/2018/09/radio-banner-1.jpg",
             "action": "update:content:underlay:text",
             "data": {
                "headline": "Ода 90-м, или всё новое - хорошо забытое старое. В этот плейлист мы \"закупорили\" ностальгию из студии Авторадио! ",
                "text": ""
             }
          },
-         "image": "https://www.tsn24.ru/upload/resize_cache/iblock/9f1/720_460_2/osin4tk2idezggkbae1icp1zuizeunf3.png",
+         "image": "https://yt3.googleusercontent.com/ytc/AIdro_kUkL-a59qSwEq6Dc-Il979Khwahh1_URZsficN8tYV=s160-c-k-c0x00ffffff-no-rj",
          "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/oda_90m.json"
       },
       {
@@ -107,14 +106,13 @@
          "focus": true,
          "selection": {
             "important": true,
-            "background": "https://blogs.salford.ac.uk/made-in-salford/wp-content/uploads/sites/41/2018/09/radio-banner-1.jpg",
             "action": "update:content:underlay:text",
             "data": {
                "headline": "ХИТЫ ЛЕТА 2024 🔥Слушай и смотри живое исполнение песен, которые звучат этим летом повсюду!",
                "text": ""
             }
          },
-         "image": "https://www.tsn24.ru/upload/resize_cache/iblock/9f1/720_460_2/osin4tk2idezggkbae1icp1zuizeunf3.png",
+         "image": "https://yt3.googleusercontent.com/ytc/AIdro_kUkL-a59qSwEq6Dc-Il979Khwahh1_URZsficN8tYV=s160-c-k-c0x00ffffff-no-rj",
          "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/hity_leta_24.json"
       },
       {
@@ -122,14 +120,13 @@
          "focus": true,
          "selection": {
             "important": true,
-            "background": "https://blogs.salford.ac.uk/made-in-salford/wp-content/uploads/sites/41/2018/09/radio-banner-1.jpg",
             "action": "update:content:underlay:text",
             "data": {
                "headline": "ХИТЫ 2024! 🔥LIVE из студии Авторадио",
                "text": ""
             }
          },
-         "image": "https://www.tsn24.ru/upload/resize_cache/iblock/9f1/720_460_2/osin4tk2idezggkbae1icp1zuizeunf3.png",
+         "image": "https://yt3.googleusercontent.com/ytc/AIdro_kUkL-a59qSwEq6Dc-Il979Khwahh1_URZsficN8tYV=s160-c-k-c0x00ffffff-no-rj",
          "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/avtoradio.json"
       },
       {
@@ -137,84 +134,78 @@
          "focus": true,
          "selection": {
             "important": true,
-            "background": "https://blogs.salford.ac.uk/made-in-salford/wp-content/uploads/sites/41/2018/09/radio-banner-1.jpg",
             "action": "update:content:underlay:text",
             "data": {
                "headline": "Плейлист на выпускной 2024. Хиты для вашего выпускного вечера",
                "text": ""
             }
          },
-         "image": "https://www.tsn24.ru/upload/resize_cache/iblock/9f1/720_460_2/osin4tk2idezggkbae1icp1zuizeunf3.png",
+         "image": "https://yt3.googleusercontent.com/ytc/AIdro_kUkL-a59qSwEq6Dc-Il979Khwahh1_URZsficN8tYV=s160-c-k-c0x00ffffff-no-rj",
          "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/avtoradio.json"
       },
       {
          "focus": true,
          "selection": {
             "important": true,
-            "background": "https://blogs.salford.ac.uk/made-in-salford/wp-content/uploads/sites/41/2018/09/radio-banner-1.jpg",
             "action": "update:content:underlay:text",
             "data": {
                "headline": "Хиты лета 2024 🔥",
                "text": ""
             }
          },
-         "image": "https://www.tsn24.ru/upload/resize_cache/iblock/9f1/720_460_2/osin4tk2idezggkbae1icp1zuizeunf3.png",
+         "image": "https://yt3.googleusercontent.com/ytc/AIdro_kUkL-a59qSwEq6Dc-Il979Khwahh1_URZsficN8tYV=s160-c-k-c0x00ffffff-no-rj",
          "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/avtoradio.json"
       },
       {
          "focus": true,
          "selection": {
             "important": true,
-            "background": "https://blogs.salford.ac.uk/made-in-salford/wp-content/uploads/sites/41/2018/09/radio-banner-1.jpg",
             "action": "update:content:underlay:text",
             "data": {
                "headline": "Хиты лета 2024 🔥",
                "text": ""
             }
          },
-         "image": "https://www.tsn24.ru/upload/resize_cache/iblock/9f1/720_460_2/osin4tk2idezggkbae1icp1zuizeunf3.png",
+         "image": "https://yt3.googleusercontent.com/ytc/AIdro_kUkL-a59qSwEq6Dc-Il979Khwahh1_URZsficN8tYV=s160-c-k-c0x00ffffff-no-rj",
          "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/avtoradio.json"
       },
       {
          "focus": true,
          "selection": {
             "important": true,
-            "background": "https://blogs.salford.ac.uk/made-in-salford/wp-content/uploads/sites/41/2018/09/radio-banner-1.jpg",
             "action": "update:content:underlay:text",
             "data": {
                "headline": "Хиты лета 2024 🔥",
                "text": ""
             }
          },
-         "image": "https://www.tsn24.ru/upload/resize_cache/iblock/9f1/720_460_2/osin4tk2idezggkbae1icp1zuizeunf3.png",
+         "image": "https://yt3.googleusercontent.com/ytc/AIdro_kUkL-a59qSwEq6Dc-Il979Khwahh1_URZsficN8tYV=s160-c-k-c0x00ffffff-no-rj",
          "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/avtoradio.json"
       },
       {
          "focus": true,
          "selection": {
             "important": true,
-            "background": "https://blogs.salford.ac.uk/made-in-salford/wp-content/uploads/sites/41/2018/09/radio-banner-1.jpg",
             "action": "update:content:underlay:text",
             "data": {
                "headline": "Хиты лета 2024 🔥",
                "text": ""
             }
          },
-         "image": "https://www.tsn24.ru/upload/resize_cache/iblock/9f1/720_460_2/osin4tk2idezggkbae1icp1zuizeunf3.png",
+         "image": "https://yt3.googleusercontent.com/ytc/AIdro_kUkL-a59qSwEq6Dc-Il979Khwahh1_URZsficN8tYV=s160-c-k-c0x00ffffff-no-rj",
          "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/avtoradio.json"
       },
       {
          "focus": true,
          "selection": {
             "important": true,
-            "background": "https://blogs.salford.ac.uk/made-in-salford/wp-content/uploads/sites/41/2018/09/radio-banner-1.jpg",
             "action": "update:content:underlay:text",
             "data": {
                "headline": "Хиты лета 2024 🔥",
                "text": ""
             }
          },
-         "image": "https://www.tsn24.ru/upload/resize_cache/iblock/9f1/720_460_2/osin4tk2idezggkbae1icp1zuizeunf3.png",
+         "image": "https://yt3.googleusercontent.com/ytc/AIdro_kUkL-a59qSwEq6Dc-Il979Khwahh1_URZsficN8tYV=s160-c-k-c0x00ffffff-no-rj",
          "action": "content:https://raw.githubusercontent.com/wals09/prog/main/avtoradio/avtoradio.json"
       }
    ]
