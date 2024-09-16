@@ -2,21 +2,25 @@
    "compress": true,
    "type": "list",
    "background": "https://fs01.cap.ru/www22-09/galatr/news/2022/12/17/a8c693cb-c956-48d9-a84a-63de274c7614/kartinki-diskoteka-16.jpg",
-   "dictionary": "https://wals09.github.io/kf/dictionary.json",
+   "dictionary": "https://wals09.github.io/msx/dictionary.json",
    "headline": "АВТОРАДИО {col:red}|{col} Трансляции",
-   "transparent": 2,
+   "extension": "{col:msx-white}{ico:msx-white:event} {now:date:D, M d, yyyy}{tb}{ico:msx-white:access-time} {now:time:hh:mm}",
    "preload": "next",
+   "captionUnderlay": 1,
    "underlay": {
-      "action": "[quiet|delay:backdrop:1:interaction:load:http://msx.benzac.de/interaction/backdrop.html]",
-      "data": {
-         "url": "none"
-      },
       "items": [
+         {
+            "type": "space",
+            "round": false,
+            "layout": "0,0,16,1",
+            "offset": "-1.25,0.4,3,-0.2",
+            "color": "msx-red"
+         },
          {
             "id": "text",
             "type": "space",
-            "layout": "0,0,15,3",
-            "offset": "0.4,-0.5,0.1,0",
+            "layout": "0,1,16,1",
+            "offset": "0,-0.5,0.1,0",
             "headline": "",
             "text": ""
          },
@@ -48,50 +52,20 @@
       "layout": "0,0,3,2",
       "area": "0,2,16,6",
       "offset": "0,-0.5,0,0",
-      "wrapperColor": "msx-glass",
-      "imageHeight": 1.8,
-      "color": "transparent",
-      "imageFiller": "cover",
-      "truncation": "titleFooter",
-      "transparent": 1,
-      "titleHeader": "",
-      "titleFooter": "",
-      "description": "No description available.",
-      "backdrop": "none",
-      "image": "none",
-      "selection": {
-         "important": true,
-         "action": "data",
-         "data": {
-            "actions": [
-               {
-                  "action": "invalidate:content:underlay:text"
-               },
-               {
-                  "action": "delay:text:1:update:content:underlay:text",
-                  "data": {
-                     "headline": "{context:titleHeader}",
-                     "text": "{context:titleFooter}{br}{br}{context:description}"
-                  }
-               },
-               {
-                  "action": "delay:backdrop:1:interaction:load:http://msx.benzac.de/interaction/backdrop.html",
-                  "data": {
-                     "url": "{context:backdrop}",
-                     "type": 1
-                  }
-               }
-            ]
-         }
-      },
-      "properties": {
-         "image:extension": "| {context:titleHeader}"
-      }
+      "trigger:back": "player:stop",
+      "color": "msx-glass",
+      "imageFiller": ""
    },
    "items": [
       {
          "titleHeader": "",
-         "description": "{col:msx-white}Дискотека 80-х (2019 г.)  {br}Запись прямой трансляции фестиваля Авторадио/ Disco 80's festival - LIVE",
+         "selection": {
+            "important": true,
+            "action": "update:content:underlay:text",
+            "data": {
+               "headline": "{col:msx-white}Дискотека 80-х (2019 г.)  Запись прямой трансляции фестиваля Авторадио/ Disco 80's festival - LIVE"
+            }
+         },
          "image": "https://i.ytimg.com/vi/UDcfYCR_wl0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBjjD2iMdL1FQDyCo_b8mJAegwZBg",
          "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=2-daXJ9DKrA",
          "playerLabel": "Дискотека 80-х (2019 г.)",
@@ -101,7 +75,13 @@
       },
       {
          "titleHeader": "",
-         "description": "{col:msx-white}Дискотека 80-х (2018 г.) {br} Запись прямой трансляции фестиваля Авторадио/ Disco 80's festival - LIVE ",
+         "selection": {
+            "important": true,
+            "action": "update:content:underlay:text",
+            "data": {
+               "headline": "{col:msx-white}Дискотека 80-х (2018 г.) Запись прямой трансляции фестиваля Авторадио/ Disco 80's festival - LIVE "
+            }
+         },
          "image": "https://i.ytimg.com/vi/RfSGWt8_PXk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAJ64LmNfRdrfLafQZ1v8UYIABsww",
          "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=ByXqZOrss9E",
          "playerLabel": "Дискотека 80-х (2018 г.)",
@@ -111,7 +91,13 @@
       },
       {
          "titleHeader": "",
-         "description": "{col:msx-white}«Авторадио – 25 LIVE»  {br}Юбилейный концерт в Крокус Сити Холле (запись трансляции)",
+         "selection": {
+            "important": true,
+            "action": "update:content:underlay:text",
+            "data": {
+               "headline": "{col:msx-white}«Авторадио – 25 LIVE» Юбилейный концерт в Крокус Сити Холле (запись трансляции)"
+            }
+         },
          "image": "https://i.ytimg.com/vi/rDVxldImC4k/maxresdefault.jpg",
          "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=rDVxldImC4k",
          "playerLabel": "«Авторадио – 25 LIVE»",
@@ -121,7 +107,13 @@
       },
       {
          "titleHeader": "",
-         "description": "{col:msx-white}Дискотека 80-х (2017 г.) {br}Запись прямой трансляции фестиваля Авторадио/ Disco 80's festival - LIVE",
+         "selection": {
+            "important": true,
+            "action": "update:content:underlay:text",
+            "data": {
+               "headline": "{col:msx-white}Дискотека 80-х (2017 г.) Запись прямой трансляции фестиваля Авторадио/ Disco 80's festival - LIVE"
+            }
+         },
          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCU5cGezCDZCce87zeqKRplL7iBv0ZFD70pA&s",
          "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=-dhhfkDDcPs",
          "playerLabel": "Дискотека 80-х (2017 г.) ",
@@ -131,7 +123,13 @@
       },
       {
          "titleHeader": "",
-         "description": "{col:msx-white}Дискотека 80-х (2015 г.){br} Запись прямой трансляции фестиваля Авторадио/ Disco 80's festival - LIVE",
+         "selection": {
+            "important": true,
+            "action": "update:content:underlay:text",
+            "data": {
+               "headline": "{col:msx-white}Дискотека 80-х (2015 г.) Запись прямой трансляции фестиваля Авторадио/ Disco 80's festival - LIVE"
+            }
+         },
          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbrjING5r358ddIpb12nsyQsZBSSne4liiaA&s",
          "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=4cZqUztx8Nk",
          "playerLabel": "Дискотека 80-х (2015 г.)",
@@ -141,7 +139,13 @@
       },
       {
          "titleHeader": "",
-         "description": "{col:msx-white}Дискотека 80-х 2014 год",
+         "selection": {
+            "important": true,
+            "action": "update:content:underlay:text",
+            "data": {
+               "headline": "{col:msx-white}Дискотека 80-х 2014 год"
+            }
+         },
          "image": "https://i.ytimg.com/vi/A178oHqfzF4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAMLgAbWkS2tzTN7aSlTmI_K71lDg",
          "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=A178oHqfzF4",
          "playerLabel": "Дискотека 80-х 2014 год",
@@ -151,7 +155,13 @@
       },
       {
          "titleHeader": "",
-         "description": "{col:msx-white}Дискотека 80-х 2012. Телеверсия фестиваля Авторадио",
+         "selection": {
+            "important": true,
+            "action": "update:content:underlay:text",
+            "data": {
+               "headline": "{col:msx-white}Дискотека 80-х 2012. Телеверсия фестиваля Авторадио"
+            }
+         },
          "image": "https://i.ytimg.com/vi/PSdebtjbrEU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDNeEfoaD6lNoIoYqthBiFZSjwLnA",
          "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=PSdebtjbrEU",
          "playerLabel": "Дискотека 80-х 2012",
@@ -161,7 +171,13 @@
       },
       {
          "titleHeader": "",
-         "description": "{col:msx-white}Дискотека 80-х (2009) Фестиваль Авторадио ",
+         "selection": {
+            "important": true,
+            "action": "update:content:underlay:text",
+            "data": {
+               "headline": "{col:msx-white}Дискотека 80-х (2009) Фестиваль Авторадио "
+            }
+         },
          "image": "https://i.ytimg.com/vi/viVP31rX8eY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDPd8d8DpMin1IOm2U0VAjgjYsB1g",
          "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=viVP31rX8eY",
          "playerLabel": "Дискотека 80-х (2009)",
@@ -171,7 +187,13 @@
       },
       {
          "titleHeader": "",
-         "description": "{col:msx-white}Дискотека 80-х (2008) Полная версия фестиваля Авторадио",
+         "selection": {
+            "important": true,
+            "action": "update:content:underlay:text",
+            "data": {
+               "headline": "{col:msx-white}Дискотека 80-х (2008) Полная версия фестиваля Авторадио"
+            }
+         },
          "image": "https://i.ytimg.com/vi/uTzNT4tn1O0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAHW-1B2aRtFAR_lpe5jnQ1NQ1sZg",
          "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=uTzNT4tn1O0",
          "playerLabel": "Дискотека 80-х (2008)",
@@ -181,7 +203,13 @@
       },
       {
          "titleHeader": "",
-         "description": "{col:msx-white}Дискотека 80-х (2006) Полная версия фестиваля Авторадио",
+         "selection": {
+            "important": true,
+            "action": "update:content:underlay:text",
+            "data": {
+               "headline": "{col:msx-white}Дискотека 80-х (2006) Полная версия фестиваля Авторадио"
+            }
+         },
          "image": "https://i.ytimg.com/vi/ZgaIH5aAhB4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB9EL9rBV9SxnfXeUbEevOShzJcDg",
          "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=ZgaIH5aAhB4",
          "playerLabel": "Дискотека 80-х (2006)",
@@ -191,7 +219,13 @@
       },
       {
          "titleHeader": "",
-         "description": "{col:msx-white}Дискотека 80-х (2006) Полная версия фестиваля Авторадио",
+         "selection": {
+            "important": true,
+            "action": "update:content:underlay:text",
+            "data": {
+               "headline": "{col:msx-white}Дискотека 80-х (2006) Полная версия фестиваля Авторадио"
+            }
+         },
          "image": "https://i.ytimg.com/vi/5T3OiAB52C4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBp7ZN1dGn9WnB2ioYuCqcK3squ2g",
          "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=5T3OiAB52C4",
          "playerLabel": "Дискотека 80-х (2006)",
@@ -201,7 +235,13 @@
       },
       {
          "titleHeader": "",
-         "description": "{col:msx-white}Дискотека 80-х (2002) Фестиваль Авторадио (запись шоу)",
+         "selection": {
+            "important": true,
+            "action": "update:content:underlay:text",
+            "data": {
+               "headline": "{col:msx-white}Дискотека 80-х (2002) Фестиваль Авторадио (запись шоу)"
+            }
+         },
          "image": "https://i.ytimg.com/vi/4b1ApS6WLwI/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD-In09cXlrOdU5B7SlYy6fshTKLw",
          "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=4b1ApS6WLwI",
          "playerLabel": "Дискотека 80-х (2002).Запись шоу",
@@ -211,7 +251,13 @@
       },
       {
          "titleHeader": "",
-         "description": "{col:msx-white}Дискотека 80-х (2002) Фестиваль Авторадио  (DVDRip)",
+         "selection": {
+            "important": true,
+            "action": "update:content:underlay:text",
+            "data": {
+               "headline": "{col:msx-white}Дискотека 80-х (2002) Фестиваль Авторадио  (DVDRip)"
+            }
+         },
          "image": "https://i.ytimg.com/vi/4b1ApS6WLwI/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD-In09cXlrOdU5B7SlYy6fshTKLw",
          "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=X4XaUpSLA0A",
          "playerLabel": "Дискотека 80-х (2002).DVDRip",
