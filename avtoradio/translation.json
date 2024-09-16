@@ -265,6 +265,23 @@
          "properties": {
             "trigger:back": "player:stop"
          }
+      },
+      {
+         "titleHeader": "",
+         "selection": {
+            "important": true,
+            "action": "update:content:underlay:text",
+            "background": "https://fs01.cap.ru/www22-09/galatr/news/2022/12/17/a8c693cb-c956-48d9-a84a-63de274c7614/kartinki-diskoteka-16.jpg",
+            "data": {
+               "headline": "{col:msx-white}Кумиры 80-х: Thomas Anders, Savage, Black, Gazebo, Smokie..."
+            }
+         },
+         "image": "https://i.ytimg.com/vi/rhy5X2WgkP4/maxresdefault.jpg",
+         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=rhy5X2WgkP4",
+         "playerLabel": "Кумиры 80-x",
+         "properties": {
+            "trigger:back": "player:stop"
+         }
       }
    ]
 }
