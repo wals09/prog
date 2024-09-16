@@ -3,8 +3,10 @@
    "type": "list",
    "dictionary": "https://wals09.github.io/msx/dictionary.json",
    "headline": "АВТОРАДИО {col:red}|{col} Трансляции",
+   "background": "https://github.com/wals09/prog/blob/main/avtoradio/img/bg.jpg?raw=true",
    "extension": "{col:msx-white}{ico:msx-white:event} {now:date:D, M d, yyyy}{tb}{ico:msx-white:access-time} {now:time:hh:mm}",
    "preload": "next",
+   "transparent": 1,
    "captionUnderlay": 1,
    "underlay": {
       "items": [
@@ -61,7 +63,6 @@
          "selection": {
             "important": true,
             "action": "update:content:underlay:text",
-            "background": "https://fs01.cap.ru/www22-09/galatr/news/2022/12/17/a8c693cb-c956-48d9-a84a-63de274c7614/kartinki-diskoteka-16.jpg",
             "data": {
                "headline": "{col:msx-white}Дискотека 80-х (2019 г.)  Запись прямой трансляции фестиваля Авторадио/ Disco 80's festival - LIVE"
             }
@@ -78,7 +79,6 @@
          "selection": {
             "important": true,
             "action": "update:content:underlay:text",
-            "background": "https://fs01.cap.ru/www22-09/galatr/news/2022/12/17/a8c693cb-c956-48d9-a84a-63de274c7614/kartinki-diskoteka-16.jpg",
             "data": {
                "headline": "{col:msx-white}Дискотека 80-х (2018 г.) Запись прямой трансляции фестиваля Авторадио/ Disco 80's festival - LIVE "
             }
@@ -95,7 +95,6 @@
          "selection": {
             "important": true,
             "action": "update:content:underlay:text",
-            "background": "https://fs01.cap.ru/www22-09/galatr/news/2022/12/17/a8c693cb-c956-48d9-a84a-63de274c7614/kartinki-diskoteka-16.jpg",
             "data": {
                "headline": "{col:msx-white}«Авторадио – 25 LIVE» Юбилейный концерт в Крокус Сити Холле (запись трансляции)"
             }
@@ -112,7 +111,6 @@
          "selection": {
             "important": true,
             "action": "update:content:underlay:text",
-            "background": "https://fs01.cap.ru/www22-09/galatr/news/2022/12/17/a8c693cb-c956-48d9-a84a-63de274c7614/kartinki-diskoteka-16.jpg",
             "data": {
                "headline": "{col:msx-white}Дискотека 80-х (2017 г.) Запись прямой трансляции фестиваля Авторадио/ Disco 80's festival - LIVE"
             }
@@ -129,7 +127,6 @@
          "selection": {
             "important": true,
             "action": "update:content:underlay:text",
-            "background": "https://fs01.cap.ru/www22-09/galatr/news/2022/12/17/a8c693cb-c956-48d9-a84a-63de274c7614/kartinki-diskoteka-16.jpg",
             "data": {
                "headline": "{col:msx-white}Дискотека 80-х (2015 г.) Запись прямой трансляции фестиваля Авторадио/ Disco 80's festival - LIVE"
             }
@@ -146,7 +143,6 @@
          "selection": {
             "important": true,
             "action": "update:content:underlay:text",
-            "background": "https://fs01.cap.ru/www22-09/galatr/news/2022/12/17/a8c693cb-c956-48d9-a84a-63de274c7614/kartinki-diskoteka-16.jpg",
             "data": {
                "headline": "{col:msx-white}Дискотека 80-х 2014 год"
             }
@@ -163,7 +159,6 @@
          "selection": {
             "important": true,
             "action": "update:content:underlay:text",
-            "background": "https://fs01.cap.ru/www22-09/galatr/news/2022/12/17/a8c693cb-c956-48d9-a84a-63de274c7614/kartinki-diskoteka-16.jpg",
             "data": {
                "headline": "{col:msx-white}Дискотека 80-х 2012. Телеверсия фестиваля Авторадио"
             }
@@ -180,7 +175,6 @@
          "selection": {
             "important": true,
             "action": "update:content:underlay:text",
-            "background": "https://fs01.cap.ru/www22-09/galatr/news/2022/12/17/a8c693cb-c956-48d9-a84a-63de274c7614/kartinki-diskoteka-16.jpg",
             "data": {
                "headline": "{col:msx-white}Дискотека 80-х (2009) Фестиваль Авторадио "
             }
@@ -197,7 +191,6 @@
          "selection": {
             "important": true,
             "action": "update:content:underlay:text",
-            "background": "https://fs01.cap.ru/www22-09/galatr/news/2022/12/17/a8c693cb-c956-48d9-a84a-63de274c7614/kartinki-diskoteka-16.jpg",
             "data": {
                "headline": "{col:msx-white}Дискотека 80-х (2008) Полная версия фестиваля Авторадио"
             }
@@ -214,7 +207,6 @@
          "selection": {
             "important": true,
             "action": "update:content:underlay:text",
-            "background": "https://fs01.cap.ru/www22-09/galatr/news/2022/12/17/a8c693cb-c956-48d9-a84a-63de274c7614/kartinki-diskoteka-16.jpg",
             "data": {
                "headline": "{col:msx-white}Дискотека 80-х (2006) Полная версия фестиваля Авторадио"
             }
@@ -231,7 +223,6 @@
          "selection": {
             "important": true,
             "action": "update:content:underlay:text",
-            "background": "https://fs01.cap.ru/www22-09/galatr/news/2022/12/17/a8c693cb-c956-48d9-a84a-63de274c7614/kartinki-diskoteka-16.jpg",
             "data": {
                "headline": "{col:msx-white}Дискотека 80-х (2006) Полная версия фестиваля Авторадио"
             }
@@ -248,7 +239,6 @@
          "selection": {
             "important": true,
             "action": "update:content:underlay:text",
-            "background": "https://fs01.cap.ru/www22-09/galatr/news/2022/12/17/a8c693cb-c956-48d9-a84a-63de274c7614/kartinki-diskoteka-16.jpg",
             "data": {
                "headline": "{col:msx-white}Дискотека 80-х (2002) Фестиваль Авторадио (запись шоу)"
             }
@@ -265,7 +255,6 @@
          "selection": {
             "important": true,
             "action": "update:content:underlay:text",
-            "background": "https://fs01.cap.ru/www22-09/galatr/news/2022/12/17/a8c693cb-c956-48d9-a84a-63de274c7614/kartinki-diskoteka-16.jpg",
             "data": {
                "headline": "{col:msx-white}Дискотека 80-х (2002) Фестиваль Авторадио  (DVDRip)"
             }
