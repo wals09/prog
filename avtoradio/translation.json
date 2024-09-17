@@ -224,12 +224,12 @@
             "important": true,
             "action": "update:content:underlay:text",
             "data": {
-               "headline": "{col:msx-white}Дискотека 80-х (2006) Полная версия фестиваля Авторадио"
+               "headline": "{col:msx-white}Дискотека 80-х (2005) Полная версия фестиваля Авторадио"
             }
          },
          "image": "https://i.ytimg.com/vi/5T3OiAB52C4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBp7ZN1dGn9WnB2ioYuCqcK3squ2g",
          "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=5T3OiAB52C4",
-         "playerLabel": "Дискотека 80-х (2006)",
+         "playerLabel": "Дискотека 80-х (2005)",
          "properties": {
             "trigger:back": "player:stop"
          }
