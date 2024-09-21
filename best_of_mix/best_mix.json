@@ -70,7 +70,10 @@
       "offset": "0,0.3,0,0",
       "trigger:back": "player:stop",
       "color": "msx-glass",
-      "imageFiller": ""
+      "imageFiller": "",
+      "properties": {
+         "trigger:back": "player:stop"
+      }
    },
    "items": [
       {
