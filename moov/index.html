@@ -1,0 +1,194 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8">
+<title>Moovies 1.2 Beta</title><meta http-equiv="Cache-Control" content="no-cache">
+<style type="text/css">h1 {font-family:sans-serif;color: white;}</style>
+<script type="text/javascript" src="/js/tvx-74.js"></script>
+<script type="text/javascript">
+function MyHandler() {
+var storage = new TVXStorage();
+var cookies = new TVXCookies();
+
+var currentUrl = window.location.href; // protocol href
+var regex = /^(.*?):\/\//;
+var matches = currentUrl.match(regex);
+var protocol = matches && matches[1] ? matches[1] : 'http';
+var userAgent = navigator.userAgent;
+
+var main = {
+    headline: null,
+    transparent: 2,
+    cache: false,
+    options: {headline: "Доп. управление", caption: "меню",
+    template: {enumerate: false, type: "control", layout: "0,0,8,1"}, items: [{icon:"volume-up", label: "Звук", action: "volume"},
+        {icon:"zoom-out-map", key: "9", label: "Сброс разрешение MSX", action: "settings:layout"},
+        {icon:"settings", label: "Настройки", action: "settings"},
+{icon: "msx-blue:info", iconSize: "medium", label: "отладка", "action": "content:data", data: {
+    pages: [
+        {
+            items: [
+                {type:"space", layout:"0,0,7,2", headline:"Отладочная информация", color: "msx-glass", "enable": false,
+                    text: "Эта информация необходима для Администрации{br}{br} Портал открылся по протоколу: {txt:msx-green:"+protocol+"}{br}Ваше устройство: {txt:msx-blue:"+userAgent+"}" },
+            {"type": "button", "layout": "7,0,2,2", "title": "доп.инфо", "icon": "coronavirus", "iconSize": "small", action: "settings:about"},
+            //{"type": "button", "layout": "9,0,3,1", "title": "Логи", "icon": "menu-book", "iconSize": "small", action: "log"},
+            
+            {"type": "button", "layout": "9,0,3,1", "title": "Логи", "icon": "menu-book", "iconSize": "small", action: "settings:id"},
+            
+            {"type": "button", "layout": "9,1,3,1", "title": "reboot", "icon": "replay-circle-filled", "iconSize": "small", action: "dialog:application"}
+            
+            
+                
+            ]
+        }
+    ]
+}},
+{icon: "delete-forever", iconSize: "medium", label: "Очистить данные", action: "interaction:commit", data: { action: "clearStorage" } }
+] },
+    flag: "content_flag",
+    refocus: 1,
+    style: "flat-separator",
+    dictionary: protocol + "://moovies.uz/msx/ru.json",
+	logo: protocol + "://moovies.uz/images/infinity.png",
+	background: protocol + "://moovies.uz/images/backnew.jpg",
+	//#2C94FF:
+menu: [ {icon:"info",label: "Информация", data: { pages: [ {
+items: [
+{type: "default",layout: "0,0,6,6",
+text: "Привет, с Вами все еще один из 'разработчиков' M∞VIES'а, Скоро планируется долгожданное обновление для портала. {br}Ну и больше пока ни какой инфорфации)  {br}{br}{txt:white:Напоминаем Наш актуальный на постоянке адрес портала} {txt:msx-yellow:Moovies.UZ} {br}Так же мы есть во всех (но это не точно) лаунчерах MSX {br} Что-то предложить, спросить, сообщить о багах вы все так же можете в нашем чате, доступный по QR-коду" },
+{type: "space", layout: "6,0,6,6", imageFiller: "fit", image: "http://moovies.uz/images/qr.png"}
+]
+}]}},
+      /*{icon:"bookmarks", label: "Избранное",data: "request:interaction:init@http://moovies.uz/msx/my/bookmarks.html"},*/
+{icon:"search", label:"Где будем искать?", 
+data: {
+    type: "pages",extension: "{ico:msx-white:event} {now:date:dd.mm.yyyy}{tb}{ico:msx-white:access-time} {now:time:hh:mm}", 
+    background: protocol +"://moovies.uz/images/backnew.jpg", preload: "none", transparent: 2,
+    pages: [{ items: [
+{type: "space", layout: "0,0,4,2", imageFiller: "fit", image: protocol +"://moovies.uz/images/filx2.png", "enable": false},
+{type: "space", layout: "0,2,4,2", color: "msx-glass", headline: "Поиск по Филмиксу", text: "Поиск по основному каталогу Филмиса", "enable": false},
+{type: "button", layout: "0,4,4,1", label: "идём искать", action: "content:request:interaction:init@"+ protocol + "://moovies.uz/search.html?url="+ protocol + "%3A%2F%2Fmoovies.uz%2Fapi%2Ffin%2Ffilmix%3Fquery%3D%7BQUERY%7D"},
+
+{type: "space", layout: "4,0,4,2", imageFiller: "fit", image: protocol +"://moovies.uz/images/hdvb2.png", "enable": false},
+{type: "space", layout: "4,2,4,2", color: "msx-glass", headline: "Поиск по HDVB", text: "Поиск по базе крупного источника HDVB он же MovieLab", "enable": false},
+{type: "button", layout: "4,4,4,1", label: "попробуем тут?", action: "content:request:interaction:init@"+ protocol + "://moovies.uz/search.html?url="+ protocol + "%3A%2F%2Fmoovies.uz%2Fapi%2Ffin%2Fhdvb%3Fquery%3D%7BQUERY%7D"},
+
+{type: "space", layout: "8,0,4,2", imageFiller: "fit", image: "https://files.readme.io/29c6fee-blue_short.svg", "enable": false},
+{type: "space", layout: "8,2,4,2", color: "msx-glass", headline: "Поиск по TMDB", text: "Поиск по базе крупного кино-источника TMDB", "enable": false},
+{type: "button", layout: "8,4,4,1", label: "попытка, не пытка", action: "content:request:interaction:init@"+ protocol + "://moovies.uz/search.html?url="+ protocol + "%3A%2F%2Fmoovies.uz%2Fapi%2Ffin%2Ftmdb%3Fquery%3D%7BQUERY%7D"},
+/*
+{type: "space", layout: "8,0,4,2", imageFiller: "fit", image: protocol +"://moovies.uz/images/cdnmov.png", "enable": false},
+{type: "space", layout: "8,2,4,2", color: "msx-glass", headline: "Поиск по CDNMovies'у",
+text: "Поиск по базе крупного источника CDNMovies", "enable": false},
+{type: "button", layout: "8,4,4,1", label: "можно и тут", action: "content:request:interaction:init@"+ protocol + "://moovies.uz/search.html?url="+ protocol + "%3A%2F%2Fmoovies.uz%2Fapi%2Ffin%2Fcdnmovies%3Fquery%3D%7BQUERY%7D"}*/
+]}]}},
+        //#00A3FF:
+    {type:"separator"},//#5C8FEB:whatshot   #5D8FE9:star   "lineColor": "#5D8FE9"
+    {icon:"whatshot", label: "Новинки", data: ""+ protocol + "://moovies.uz/api/rubric/fnova"},
+    {icon:"flash-on", label: "Популярное", data: ""+ protocol + "://moovies.uz/api/rubric/ffamed"},
+    {icon:"remove-red-eye", label: "Сейчас смотрят", data: ""+ protocol + "://moovies.uz/api/rubric/flook"},
+    {icon:"star", label: "Отличный выбор", data: ""+ protocol + "://moovies.uz/api/rubric/fselect"},
+    
+    {type:"separator"},
+    {icon:"movie", label: "Фильмы", type: "control", data: "request:interaction:init@"+ protocol + "://moovies.uz/section/movie"},
+    {icon:"theaters", label: "Сериалы" ,type: "control", data: "request:interaction:init@"+ protocol + "://moovies.uz/section/ep"},
+    {icon:"toys", label: "Мультфильмы", data: "request:interaction:init@"+ protocol + "://moovies.uz/section/cartoons"},
+    {icon:"smart-toy", label: "Мультсериалы", data: "request:interaction:init@"+ protocol + "://moovies.uz/section/ani-series"},
+    {type:"separator"},
+    
+    {icon:"airline-seat-recline-extra", label:"Досуг", 
+data: {
+    type: "pages",extension: "{ico:msx-white:event} {now:date:dd.mm.yyyy}{tb}{ico:msx-white:access-time} {now:time:hh:mm}", 
+    background: protocol +"://moovies.uz/images/backnew.jpg", preload: "none", transparent: 2,
+    pages: [{ items: [
+{type: "space", layout: "3,1,3,1", icon: "live-tv", "enable": false},
+{type: "space", layout: "3,2,3,2", color: "msx-glass", headline: "ТВ", text: "смотрите популярные каналы бесплатно в ознакомительной форме", "enable": false},
+{type: "button", layout: "3,4,3,1", label: "идём смотреть", action: "menu:"+ protocol + "://moovies.uz/api/menu/tv"},
+
+{type: "space", layout: "6,1,3,1", icon: "radio", "enable": false},
+{type: "space", layout: "6,2,3,2", color: "msx-glass", headline: "Радио", text: "слушайте популярные и интересные радиостанции в режиме онлайна бесплатно в ознакомительной форме", "enable": false},
+{type: "button", layout: "6,4,3,1", label: "идём слушать", action: "execute:info:content:http://msx.benzac.de/services/echo.php"}
+]}]}},
+    
+    {icon:"radio", label: "Радио", data: {
+            type: "list",extension: "{ico:msx-white:event} {now:date:dd.mm.yyyy}{tb}{ico:msx-white:access-time} {now:time:hh:mm}",background: protocol +"://moovies.uz/images/backnew.jpg", preload: "none",
+            transparent: 2,template: {type: "default", layout: "0,0,6,1", imageWidth: 0.83,color: "msx-glass"},
+            items: [
+               {action: "content:http://llpp.in/m/im/loader_radio.php?type=zaycev",titleHeader: "{txt:msx-white:Зайцев.FM}",titleFooter: "Радиостанции по жанрам",image: protocol +"://moovies.uz/images/zaycevfm.png"},
+               {action: "content:"+ protocol + "://api.kulik.uz/fm/kulik",titleHeader: "{txt:msx-white:FMPLAY}",titleFooter: "Известные FM-станции",image: protocol + "://prx.kulik.uz/http://fmplay.ru/favicon.ico"},
+			   {action: "content:"+ protocol + "://api.kulik.uz/fm/record",titleHeader: "{txt:msx-white:Radio Record}",titleFooter: "Радиостанции по жанрам",image: protocol +"://moovies.uz/images/recordfm.jpg"},
+               {action: "content:http://llpp.in/m/im/loader_radio.php?type=amg",titleHeader: "{txt:msx-white:AMG Radio}",titleFooter: "Радиостанции по жанрам",image: protocol +"://moovies.uz/images/amgfm.svg"}
+            ]
+        }
+      },
+      
+    {type: "separator"},
+    {icon:"settings", label: "Настройки", data:"request:interaction:init@"+ protocol +"://moovies.uz/settings.html"},
+    {icon:"badge", label: "Coming Soon", data:"request:interaction:init@" + protocol + "://moovies.uz/auth.html"}
+], pages: null,
+};
+/*var pages = {
+    items: [
+        {type: "default",layout: "0,0,6,6",text: "{txt:white:Наш портал MOOVIES имеет свой Telegram-канал, доступный по QR-коду.} {br}Если он у вас не сканируется, введите в поиск в Telegram - @moviesgrus. {br}Мы рекомендуем подписаться, потому что там появляются ВСЕ новости о проекте"},
+        {type: "space",layout: "6,0,6,6",imageFiller: "fit",image: protocol + "://moovies.uz/images/qr-code.png"}
+    ]
+}; */
+var testItems = null;
+var setupTestItems = function(callback) {
+        //Load icons
+if (typeof callback == "function") {
+    if (testItems !== null && testItems.length > 0) {
+        callback();
+    } else {
+        TVXServices.ajax.get("msx/icons.json", {
+            success: function(data) {
+            callback();
+            },
+            error: function(error) {
+            callback();
+        }
+        });
+    }
+}};
+this.init = function() {
+// Здесь можно вызвать requestDeviceId после инициализации плагина
+    TVXInteractionPlugin.requestDeviceId(function(id) {
+        if (id) {
+            deviceId = id; // Сохранение полученного DeviceID
+            console.log('Полученное Device ID:', deviceId);
+        } else {
+            console.log('Device ID не доступен или не создан.');
+        }
+    });
+};
+this.ready = function() {
+    console.log(main);
+    this.init(); // Вызываем инициализацию
+};
+this.handleEvent = function(data) {
+    console.log(data);
+};
+this.handleData = function(data) {
+    var action = data.data.action;
+    if (action == 'clearStorage') {
+        storage.clear();
+        cookies.clear();
+        TVXInteractionPlugin.executeAction('info:Все данные (кеш) были успешно очищен');
+    }
+    console.log(data);
+};
+this.handleRequest = function(dataId, data, callback) {
+    if (dataId == "init") {
+        setupTestItems(function() {
+            callback(main);
+            console.log(data);
+        });
+    }
+};
+}
+
+TVXPluginTools.onReady(function() {
+    TVXInteractionPlugin.setupHandler(new MyHandler());
+    TVXInteractionPlugin.init();
+});
+</script>
+<script defer src="//sta.moovies.uz/script.js" data-website-id="bcdb7632-5c63-4387-a789-0ceb980c734d"></script></head>
+<body><div></div>
+</body></html>
