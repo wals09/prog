@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPK_M</title>
+    <style>
+        /* Общие стили */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        /* Секции с параллакс-эффектом */
+        .parallax-section {
+            min-height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-shadow: 1px 1px 2px #222, 0 0 1em #222, 0 0 0.2em #222;
+            color: white;
+        }
+
+        .parallax-section2 {
+            min-height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            text-shadow: 1px 1px 2px #222, 0 0 1em #222, 0 0 0.2em #222;
+   
+        }
+
+        /* Обычные секции (без параллакса) */
+        .normal-section {
+            padding: 50px 20px;
+            background: #222;
+            color: white;
+        }
+
+        /* Фоны для разных секций */
+        .hero {
+            background-image: url("img/011.jpg");
+        }
+
+        .project-1 {
+            background-image: url("img/004.jpg");
+        }
+
+        .project-2 {
+            background-image: url('img/002.jpg');
+        }
+
+        .project-3 {
+            background-image: url("img/003.png");
+        }
+
+        /* Стили для контента */
+        .content {
+            border-radius: 0px;
+        }
+
+        .content2 {
+            background: rgba(0, 0, 0, 0.0);
+            padding: 40px;
+            border-radius: 0px;
+        }
+
+        /* Стили для ссылок */
+        .project-link {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+            text-shadow: 1px 1px 2px #222, 0 0 1em #222, 0 0 0.2em #222;
+            font-size: 1.2em;
+        }
+
+        /* Кнопка "Наверх" */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(34, 34, 34, 0.7);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 1000;
+            text-shadow: 1px 1px 2px #222, 0 0 1em #222, 0 0 0.2em #222;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: rgba(68, 68, 68, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <!-- Главный экран с параллаксом -->
+    <section class="parallax-section hero">
+        <div class="content">
+            <br><h1>IPK_M</h1><br>
+            <a href="#msx-portal" class="project-link">Mediastation X портал</a>
+            <a href="#homebrew" class="project-link">Репозиторий для Homebrew Channel</a>
+            <a href="#openvpn" class="project-link">OpenVPN клиент для WebOS</a>
+        </div>
+    </section>
+
+    <!-- Обычная секция (без параллакса) -->
+    <section class="normal-section" id="msx-portal">
+        <h2>Media Station X портал W.A.L.S</h2>
+        <p>Media Station X (сокращенно MSX) – кроссплатформенное приложение доступное телевизоров LG на платформе webOS. Предназначено для создания настраиваемых мультимедийных страниц.<br>
+        Портал Web App Launche Sсreen (W.A.L.S) для Media Station X - это экран запуска вэб-приложений на вашем телевизоре без необходимости установки.</p>
+    </section>
+
+    <!-- Вторая параллакс-секция -->
+    <section class="parallax-section2 project-1">
+        <div class="content2"><br><br><br><br><br><br>
+            <h2>Как настроить портал <br> W.A.L.S</h2>
+            <p>Установите и запустите приложение Media Station X.</p>
+              <p>  Откройте настройки (Settings),</p>
+				<p>выберите пункт "Плейлист" (Start Parameter),</p>
+				<p>нажмите кнопку "Установка"(Setup),</p>
+				<p>ввести адрес (без http://):<span style="color: orange;"> wals09.github.io</span>,</p>
+				<p>подтвердить.</p>
+        </div>
+    </section>
+
+    <!-- Обычная секция -->
+    <section class="normal-section" id="homebrew">
+        <h2>Репозиторий для HomeBrewChannel</h2>
+        <p>С помощью удобного альтернативного магазина приложений Homebrew Channel от команды webOS Homebrew Project можно ознакомиться с неофициальными версиями игр и приложений для webOS, особенно тех приложений, которые не доступны в официальном магазине.</p>
+    </section>
+    
+    <!-- Третья параллакс-секция -->
+    <section class="parallax-section2 project-2">
+        <div class="content2">
+            <h2>Как добавить репозиторий<br>IPK_M</h2>
+            <p>Откройте приложение Homebrew Channel</p>
+			<p>Зайдите в настройки </p>
+			<p>Нажмите параметр "Add repository"</p>
+			<p>Пропишите адрес: <span style="color: orange;">https://pastebin.com/raw/YuSSrivd </span>,</p>
+        </div>
+    </section>
+    
+    <!-- Обычная секция -->
+    <section class="normal-section" id="openvpn">
+        <h2>OpenVPN клиент для webOS</h2>
+        <p>Описание второго проекта...</p>
+    </section>
+    
+    <!-- Четвертая параллакс-секция -->
+    <section class="parallax-section2 project-3">
+        <div class="content2">
+            <h2>Ещё один эффект</h2>
+            <p>Плавный скролл</p>
+        </div>
+    </section>
+
+    <!-- Кнопка "Наверх" -->
+    <a href="#" class="back-to-top" title="Наверх">↑</a>
+
+    <script>
+        // Показываем/скрываем кнопку "Наверх"
+        window.addEventListener('scroll', function() {
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>

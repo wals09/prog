@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPK_M</title>
+    <style>
+        /* Общие стили */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        /* Секции с параллакс-эффектом */
+        .parallax-section {
+            min-height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-shadow: 1px 1px 2px #222, 0 0 1em #222, 0 0 0.2em #222;
+            color: white;
+        }
+
+        .parallax-section2 {
+            min-height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            text-shadow: 1px 1px 2px #222, 0 0 1em #222, 0 0 0.2em #222;
+        }
+
+        /* Обычные секции (без параллакса) */
+        .normal-section {
+            padding: 50px 20px;
+            background: #222;
+            color: white;
+        }
+
+        /* Фоны для разных секций */
+        .hero {
+            background-image: url("img/011.jpg");
+        }
+
+        .project-1 {
+            background-image: url("img/004.jpg");
+        }
+
+        .project-2 {
+            background-image: url('img/002.jpg');
+        }
+
+        .project-3 {
+            background-image: url("img/003.png");
+        }
+
+        /* Стили для контента */
+        .content {
+            border-radius: 0px;
+        }
+
+        .content2 {
+            background: rgba(0, 0, 0, 0.0);
+            padding: 40px;
+            border-radius: 0px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .text-content {
+            width: 55%;
+        }
+
+        /* Стили для ссылок */
+        .project-link {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+            text-shadow: 1px 1px 2px #222, 0 0 1em #222, 0 0 0.2em #222;
+            font-size: 1.2em;
+            transition: all 0.3s;
+        }
+        
+        .project-link:hover {
+            transform: scale(1.2);
+            color: orange;
+            text-shadow: 5px 5px 5px #222, 0 0 1em #222, 0 0 0.2em #222;
+        }
+
+        /* Кнопка "Наверх" */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(34, 34, 34, 0.7);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 1000;
+            text-shadow: 1px 1px 2px #222, 0 0 1em #222, 0 0 0.2em #222;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: rgba(68, 68, 68, 0.9);
+        }
+        
+        /* Стили для карусели (правая часть) */
+        .carousel-wrapper {
+            width: 40%;
+            position: relative;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0);
+        }
+        
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .carousel-slide {
+            min-width: 100%;
+        }
+        
+        .carousel-image {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+            background: rgba(0,0,0,0);
+        }
+        
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            font-size: 20px;
+            z-index: 10;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .carousel-btn:hover {
+            background: rgba(0,0,0,0.8);
+        }
+        
+        .carousel-btn.prev {
+            left: 10px;
+        }
+        
+        .carousel-btn.next {
+            right: 10px;
+        }
+        
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        
+        .dot.active {
+            background: white;
+        }
+
+        /* Стили для дополнительных ссылок */
+        .related-links {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .related-links h3 {
+            margin-bottom: 15px;
+            color: orange;
+        }
+        
+        .related-link {
+            display: inline-block;
+            margin-right: 15px;
+            margin-bottom: 10px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .related-link:hover {
+            color: orange;
+            text-decoration: underline;
+        }
+
+        /* Адаптация для мобильных */
+        @media (max-width: 768px) {
+            .content2 {
+                flex-direction: column;
+                padding: 20px;
+            }
+            
+            .text-content, .carousel-wrapper {
+                width: 100%;
+            }
+            
+            .carousel-wrapper {
+                margin-top: 30px;
+            }
+            
+            .carousel-image {
+                height: 200px;
+            }
+            
+            .carousel-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
+            
+            .carousel-dots {
+                margin-top: 10px;
+            }
+            
+            .dot {
+                width: 10px;
+                height: 10px;
+            }
+            
+            .normal-section {
+                padding: 30px 15px;
+            }
+            
+            .project-link {
+                font-size: 1.1em;
+                margin: 8px 0;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            .related-links {
+                margin-top: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .carousel-image {
+                height: 180px;
+            }
+            
+            .content2 {
+                padding: 15px;
+            }
+            
+            .normal-section {
+                padding: 25px 10px;
+            }
+            
+            .project-link {
+                font-size: 1em;
+            }
+            
+            .back-to-top {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .related-link {
+                display: block;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Главный экран с параллаксом -->
+    <section class="parallax-section hero">
+        <div class="content">
+            <br><h1>IPK_M</h1><br>
+            <a href="#msx-portal" class="project-link">Mediastation X портал</a>
+            <a href="#homebrew" class="project-link">Репозиторий для Homebrew Channel</a>
+            <a href="#openvpn" class="project-link">OpenVPN клиент для WebOS</a>
+        </div>
+    </section>
+
+    <!-- Обычная секция (без параллакса) -->
+    <section class="normal-section" id="msx-portal">
+        <h2>Media Station X портал W.A.L.S</h2>
+        <p>Media Station X (сокращенно MSX) – кроссплатформенное приложение доступное телевизоров LG на платформе webOS. Предназначено для создания настраиваемых мультимедийных страниц.<br>
+        Портал Web App Launche Sсreen (W.A.L.S) для Media Station X - это экран запуска вэб-приложений на вашем телевизоре без необходимости установки.</p>
+    </section>
+
+    <!-- Первая параллакс-секция с каруселью -->
+    <section class="parallax-section2 project-1">
+        <div class="content2">
+            <div class="text-content">
+                <h2>Как настроить портал W.A.L.S</h2>
+                <p>Установите и запустите приложение Media Station X.</p>
+                <p>Откройте настройки (Settings),</p>
+                <p>выберите пункт "Плейлист" (Start Parameter),</p>
+                <p>нажмите кнопку "Установка"(Setup),</p>
+                <p>ввести адрес (без http://):<span style="color: orange;"> wals09.github.io</span>,</p>
+                <p>подтвердить.</p>
+                
+                <div class="related-links">
+                    <h3>Смежные темы:</h3>
+          <a href="#homebrew" class="related-link">Репозиторий для Homebrew Channel</a>
+          <a href="#openvpn" class="related-link">OpenVPN клиент для WebOS</a>
+                </div>
+            </div>
+            
+            <div class="carousel-wrapper">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-slide">
+                            <img src="img/msx/001.jpg" class="carousel-image" alt="Пример 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="img/msx/002.jpg" class="carousel-image" alt="Пример 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="img/msx/003.jpg" class="carousel-image" alt="Пример 3">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="img/msx/004.jpg" class="carousel-image" alt="Пример 4">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="img/msx/005.jpg" class="carousel-image" alt="Пример 5">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="img/msx/006.jpg" class="carousel-image" alt="Пример 6">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="img/msx/007.jpg" class="carousel-image" alt="Пример 7">
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev">❮</button>
+                    <button class="carousel-btn next">❯</button>
+                </div>
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Обычная секция -->
+    <section class="normal-section" id="homebrew">
+        <h2>Репозиторий для HomeBrewChannel</h2>
+        <p>С помощью удобного альтернативного магазина приложений Homebrew Channel от команды webOS Homebrew Project можно ознакомиться с неофициальными версиями игр и приложений для webOS, особенно тех приложений, которые не доступны в официальном магазине.</p>
+    </section>
+    
+    <!-- Вторая параллакс-секция с каруселью -->
+    <section class="parallax-section2 project-2">
+        <div class="content2">
+            <div class="text-content">
+                <h2>Как добавить репозиторий IPK_M</h2>
+                <p>Откройте приложение Homebrew Channel</p>
+                <p>Зайдите в настройки </p>
+                <p>Нажмите параметр "Add repository"</p>
+                <p>Пропишите адрес: <span style="color: orange;">https://pastebin.com/raw/YuSSrivd</span></p>
+                
+                <div class="related-links">
+                    <h3>Смежные темы:</h3>
+                     <a href="#msx-portal" class="related-link">Mediastation X портал</a>
+                    <a href="#openvpn" class="related-link">OpenVPN клиент для WebOS</a>
+		  </div>
+            </div>
+            
+            <div class="carousel-wrapper">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-slide">
+                            <img src="img/repo/001.jpg" class="carousel-image" alt="Пример 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="img/repo/002.jpg" class="carousel-image" alt="Пример 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="img/repo/003.jpg" class="carousel-image" alt="Пример 3">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="img/repo/004.jpg" class="carousel-image" alt="Пример 4">
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev">❮</button>
+                    <button class="carousel-btn next">❯</button>
+                </div>
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Обычная секция -->
+    <section class="normal-section" id="openvpn">
+        <h2>OpenVPN клиент для webOS</h2>
+        <p>OpenVPN клиент позволяет устанавливать безопасные VPN-соединения на телевизорах с webOS. Это решение особенно полезно для обхода географических ограничений и повышения конфиденциальности.</p>
+    </section>
+    
+    <!-- Третья параллакс-секция с каруселью -->
+    <section class="parallax-section2 project-3">
+        <div class="content2">
+            <div class="text-content">
+                <h2>Особенности OpenVPN клиента</h2>
+                <p>Поддержка стандартных конфигураций OpenVPN</p>
+                <p>Простое управление подключениями</p>
+                <p>Автоматическое подключение при запуске</p>
+                <p>Поддержка различных методов аутентификации</p>
+                
+                <div class="related-links">
+                    <h3>Смежные темы:</h3>
+                   <a href="#homebrew" class="related-link">Репозиторий для Homebrew Channel</a>
+                   <a href="#msx-portal" class="related-link">Mediastation X портал</a>
+		  </div>
+            </div>
+            
+            <div class="carousel-wrapper">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-slide">
+                            <img src="img/other/001.jpg" class="carousel-image" alt="Пример 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="img/other/002.jpg" class="carousel-image" alt="Пример 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="img/other/003.jpg" class="carousel-image" alt="Пример 3">
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev">❮</button>
+                    <button class="carousel-btn next">❯</button>
+                </div>
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Кнопка "Наверх" -->
+    <a href="#" class="back-to-top" title="Наверх">↑</a>
+
+    <script>
+        // Показываем/скрываем кнопку "Наверх"
+        window.addEventListener('scroll', function() {
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        // Инициализация всех каруселей
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousels = document.querySelectorAll('.carousel');
+            
+            carousels.forEach((carousel) => {
+                const container = carousel.closest('.carousel-container');
+                const slides = carousel.querySelectorAll('.carousel-slide');
+                const prevBtn = container.querySelector('.prev');
+                const nextBtn = container.querySelector('.next');
+                const dots = container.parentElement.querySelectorAll('.dot');
+                
+                let currentIndex = 0;
+                const slideCount = slides.length;
+                
+                function updateCarousel() {
+                    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+                    
+                    dots.forEach((dot, index) => {
+                        dot.classList.toggle('active', index === currentIndex);
+                    });
+                    
+                    prevBtn.style.display = currentIndex === 0 ? 'none' : 'flex';
+                    nextBtn.style.display = currentIndex === slideCount - 1 ? 'none' : 'flex';
+                }
+                
+                nextBtn.addEventListener('click', function() {
+                    if (currentIndex < slideCount - 1) {
+                        currentIndex++;
+                        updateCarousel();
+                    }
+                });
+                
+                prevBtn.addEventListener('click', function() {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        updateCarousel();
+                    }
+                });
+                
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', function() {
+                        currentIndex = index;
+                        updateCarousel();
+                    });
+                });
+                
+                updateCarousel();
+            });
+        });
+    </script>
+</body>
+</html>
