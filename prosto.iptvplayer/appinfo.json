@@ -1,0 +1,13 @@
+{
+  "id": "prosto.iptvplayer",
+  "version": "1.0.5",
+  "vendor": "OpenAI",
+  "type": "web",
+  "main": "index.html",
+  "title": "IPTV Player",
+  "icon": "icon2.png",
+ "iconColor": "#2f373e",
+"splashBackground": "splash.jpg",
+"disableBackHistoryAPI": true,
+  "uiRevision": 2
+}

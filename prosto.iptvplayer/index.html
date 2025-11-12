@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>IPTV Player</title>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+  <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Главное меню -->
+    <div id="main-menu">
+      <div class="menu-item" tabindex="0" onclick="showPanel('groups-panel')">Группы<br>Kаналы</div>
+      <div class="menu-item" tabindex="0" onclick="showChannelHistory()" onkeydown="if(event.key === 'Enter') showChannelHistory()">История<br>каналов</div>
+      <div class="menu-item" tabindex="0" onclick="showPanel('playlists-panel')">Плейлисты</div>
+      <div class="menu-item" tabindex="0" onclick="showPanel('audiotrack-panel')">Звуковая дорожка</div>
+  </div>
+
+    <div id="channel-badge" class="channel-badge-hidden">
+      <span class="channel-number"></span>
+    </div>
+
+    <!-- Панель плейлистов -->
+    <div id="playlists-panel" class="sub-panel">
+      <div class="panel-header">
+        <div class="panel-title">Плейлисты</div>
+      </div>
+      <div id="playlists-list"></div>
+    </div>
+   
+    <!-- Панель групп каналов -->
+    <div id="groups-panel" class="sub-panel">
+      <div class="panel-header">
+        <div class="panel-title">Группы каналов</div>
+      </div>
+      <div id="groups-list"></div>
+    </div>
+    
+    <!-- Форма добавления/редактирования плейлиста -->
+    <div id="playlist-form" class="form-container" style="display: none;">
+      <input type="text" id="playlist-name" placeholder="Название плейлиста" tabindex="0">
+      <input type="text" id="playlist-url" placeholder="Ссылка на .m3u/.m3u8" tabindex="0">
+      <div class="button-group">
+        <button class="secondary-btn" tabindex="0" onclick="hidePlaylistForm()">Отменить</button>
+        <button class="primary-btn" tabindex="0" onclick="savePlaylist()">Сохранить</button>
+      </div>
+    </div>
+
+    <div id="playlist-context-menu">
+      <button class="context-menu-item" onclick="loadSelectedPlaylist()" tabindex="0">Загрузить</button>
+      <button class="context-menu-item" onclick="deleteSelectedPlaylist()" tabindex="0">Удалить</button>
+    </div>
+        
+    <!-- EPG информация -->
+    <div id="epg-container" class="epg-container" style="display: none;">
+      <div id="epg-info"></div>
+    </div>
+    
+    <!-- Видео контейнер -->
+    <div id="video-container">
+      <video id="video" controls autoplay></video>
+      <div id="notification" class="notification">Каналы не найдены, добавьте или выберите другой плейлист</div>
+    </div>
+  </div>    
+  <script src="script.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js"></script>
+</body>
+</html>
